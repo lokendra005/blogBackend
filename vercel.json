@@ -8,12 +8,12 @@
     ],
     "routes": [
       {
-        "src": "/uploads/(.*)",
-        "dest": "/uploads/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "src/server.ts"
+        "src": "/api/(.*)",
+        "dest": "/src/server.ts"
       }
-    ]
+    ],
+    "env": {
+      "MONGODB_URI": "@mongodb_uri",
+      "JWT_SECRET": "@jwt_secret"
+    }
   }
